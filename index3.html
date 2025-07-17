@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <input id="inputname" type="text" placeholder="input name">
+    <button id="submit">Click </button>
+    <span id="display"></span>
+
+    <Script>
+        var inputname = document.getElementById('inputname');
+        var submit = document.getElementById('submit');
+        var display = document.getElementById('display');
+
+        submit.onclick = () => {
+            var pattern = /\d/;
+            var value = inputname.value;
+            if (value == '') {
+                display.innerText = 'Null';
+            } else if (pattern.test(value)) {
+                display.innerText = 'number';
+            } else display.innerText = 'text';
+
+        }
+    </Script>
+
+</body>
+
+</html>
